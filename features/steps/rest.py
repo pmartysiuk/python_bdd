@@ -130,6 +130,7 @@ def get_request(context, url_path_segment):
     url = append_path(context.server, url_path_segment)
     context.response = requests.get(
         url, headers=context.headers, auth=context.auth)
+    print(context.response)
 
 
 @when('I make a DELETE request to "{url_path_segment}"')
